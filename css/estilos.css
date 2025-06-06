@@ -1,0 +1,259 @@
+
+:root {
+  --volcast-primary: #7b1e3d;
+  --volcast-dark: #5a152d;
+}
+
+/* Botón de wpp */
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-fixed:hover {
+  transform: translateY(-3px);
+  color: white;
+}
+
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.text-volcast {
+  color: var(--volcast-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Teléfono destacado */
+.header-contact strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Header superior */
+.topbar span {
+  margin-right: 1rem;
+  color: #555;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--volcast-primary) !important;
+  font-weight: 600;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-nav .nav-item {
+  flex: 1;
+}
+
+.navbar-nav .nav-link {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  border-radius: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(123, 30, 61, 0.1);
+  color: var(--volcast-primary);
+}
+
+.navbar-nav .nav-link.active {
+  background-color: var(--volcast-primary);
+  color: white !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  /* Botón hamburguesa flotante */
+  .custom-toggler {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1050;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+}
+
+/* Botón principal */
+.btn-volcast {
+  background-color: var(--volcast-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+.btn-volcast:hover {
+    background-color: #c9b5bc;
+    color: #7b1e3d;
+}
+
+/* Sección principal (hero) */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../img/inicio.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(123, 30, 61, 0.6);
+  z-index: 1;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  margin: auto;
+}
+
+/* Contenido de las secciones */
+.contenido-seccion {
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.border-bordo {
+  border: 2px solid #7b1e3d !important;
+  border-radius: 5px;
+}
+
+.clientes {
+  height: 100px; 
+  padding: 1px;
+  border-radius: 3%; 
+  border: 2px solid #7b1e3d;
+}
+
+/*Carrusel de clientes*/
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+}
+
+.logo-track {
+  display: flex;
+  gap: 60px;
+  width: fit-content;
+  animation: scrollLogos 30s linear infinite;
+  align-items: center;
+}
+
+.logo-track img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/* Estilos para el contacto */
+.contacto-volcast {
+  background-color: #f8f9fa;
+  color: #7b1e3d;
+}
+
+.contacto-volcast h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.contacto-volcast p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-bordo {
+  background-color: #7b1e3d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-bordo:hover {
+  background-color: #c9b5bc;
+  color: #7b1e3d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+
+/* Estilos para el footer */
+footer {
+  background-color: #f8f9fa;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}

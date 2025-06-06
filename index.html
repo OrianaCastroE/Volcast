@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volcast - Servicio de Volquetas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/59891626226" target="_blank" class="whatsapp-fixed">
+  <i class="bi bi-whatsapp me-2"></i> Comunicate con nosotros!
+</a>
+
+
+
+<body>
+
+<header class="bg-white border-bottom py-2">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <span class="fw-bold text-volcast fs-4">VOLCAST</span>
+    <div class="d-flex align-items-center gap-3">
+      <span class="fw-bold text-volcast fs-4"><i class="bi bi-telephone-fill me-1"></i><strong>2303 5246</strong></span>
+      <!-- <span class="text-muted d-none d-lg-inline"><i class="bi bi-envelope-fill me-1"></i>info@volcast.com</span> -->
+      <button class="btn btn-volcast d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Barra de navegación responsive -->
+<nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+  <div class="container">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav w-100 text-center flex-row justify-content-between">
+        <li class="nav-item flex-fill"><a class="nav-link" href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li class="nav-item flex-fill"><a class="nav-link" href="#" onclick="mostrarSeccion('servicios')">Servicios</a></li>
+        <li class="nav-item flex-fill"><a class="nav-link" href="#" onclick="mostrarSeccion('como')">¿Cómo funciona?</a></li>
+        <li class="nav-item flex-fill"><a class="nav-link" href="#" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+        <li class="nav-item flex-fill"><a class="nav-link" href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Contenido dinámico -->
+  <div id="inicio" class="contenido-seccion container-fluid p-0">
+    <div class="hero-section text-white d-flex flex-column justify-content-center align-items-center text-center">
+      <div class="overlay"></div>
+      <div class="content z-1">
+        <h1 class="display-4 fw-bold">Tu solución rápida en volquetas</h1>
+        <p class="lead">Entrega inmediata. Atención personalizada. Servicio en toda la ciudad.</p>
+        <a href="https://wa.me/59891626226" class="btn btn-volcast mt-3">Solicitar volqueta</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- Sección de servicios -->
+  <div id="servicios" class="contenido-seccion container-fluid d-none">
+    <section class="py-5">
+        <div class="container">
+        <h2 class="text-volcast text-center mb-4">Nuestra Flota de Volquetas</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+            <div class="card h-100">
+                <img src="img/1.jpg" class="card-img-top" alt="Volqueta Pequeña">
+                <div class="card-body">
+                <h5 class="card-title">Volqueta Pequeña</h5>
+                <button class="btn btn-volcast btn-sm" onclick="toggleDetalles('pequena')">Ver Detalles</button>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100">
+                <img src="img/1.jpg" class="card-img-top" alt="Volqueta Mediana">
+                <div class="card-body">
+                <h5 class="card-title">Volqueta Mediana</h5>
+                <button class="btn btn-volcast btn-sm" onclick="toggleDetalles('mediana')">Ver Detalles</button>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100">
+                <img src="img/1.jpg" class="card-img-top" alt="Volqueta Grande">
+                <div class="card-body">
+                <h5 class="card-title">Volqueta Grande</h5>
+                <button class="btn btn-volcast btn-sm" onclick="toggleDetalles('grande')">Ver Detalles</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="detalles-volqueta" class="mt-4 p-3 rounded text-dark" style="display: none; background-color: #f5f5f5; border: 2px solid #7b1e3d; ">
+          <h5 id="titulo-detalle"></h5>
+          <p id="descripcion-detalle"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+        <h2 class="text-center mb-4">Precios y Capacidades</h2>
+          <div class="row">
+            <div class="col-md-4">
+            <div class="card mb-3 border-bordo">
+                <div class="card-body">
+                <h5 class="card-title">Volqueta Pequeña (1.5m³)</h5>
+                <p class="card-text">Ideal para escombros de pequeñas reformas, jardinería y limpiezas de hogar.</p>
+                <p class="card-text">Precio por 48hs: $2.750 + IVA</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card mb-3 border-bordo">
+                <div class="card-body">
+                <h5 class="card-title">Volqueta Mediana (6m³)</h5>
+                <p class="card-text">Perfecta para todo uso ya sean obras, reformas o demoliciones de mediano o gran porte.</p>
+                <p class="card-text">Precio por 48hs: $2.950 + IVA</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card mb-3 border-bordo">
+                <div class="card-body">
+                <h5 class="card-title">Volqueta Grande (10m³)</h5>
+                <p class="card-text">Recomendada para poda, no apto para escombros.</p>
+                <p class="card-text">Precio por 48hs: $4.000 + IVA</p>
+                </div>
+            </div>
+            </div>
+          </div>
+          <p class="text-center mt-4">Todos los precios incluyen entrega y retiro en Montevideo.</p>
+          <p class="text-center mt-4">Consulte por tarifas en Canelones.</p>
+        </div>
+    </section>
+
+    <section class="bg-white py-5">
+        <div class="container">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+            <div class="card h-100 border-bordo">
+                <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-truck-fill text-primary me-2"></i> Alquiler por Día/Semana/Mes</h5>
+                <p class="card-text">Flexibilidad en los plazos de alquiler para adaptarse a tus necesidades.</p>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100 border-bordo">
+                <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Entrega y Retiro a Domicilio</h5>
+                <p class="card-text">Llevamos la volqueta al lugar que necesites y la retiramos luego de 48hs.</p>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100 border-bordo">
+                <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-chat-dots-fill text-primary me-2"></i> Asesoramiento Personalizado</h5>
+                <p class="card-text">Te ayudamos a elegir la volqueta adecuada para tu proyecto.</p>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100 border-bordo">
+                <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-scales text-primary me-2"></i> Gestión de Residuos Segura</h5>
+                <p class="card-text">Nos encargamos de la correcta disposición de los residuos recolectados.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+ </div>
+
+  <!-- Sección de cómo funciona -->
+  <div id="como" class="contenido-seccion d-none">
+    <div class="container py-5 text-center">
+      <h2 class="text-volcast mb-4">¿Cómo funciona?</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="border p-4 rounded-3 h-100 border-bordo">
+            <div class="fw-large">📞 Llamanos o escribinos</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="border p-4 rounded-3 h-100 border-bordo">
+            <div class="fw-large">📍 Coordinamos lugar y hora</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="border p-4 rounded-3 h-100 border-bordo">
+            <div class="fw-large">🚛 Dejamos la volqueta</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="border p-4 rounded-3 h-100 border-bordo">
+            <div class="fw-large">♻️ La retiramos al terminar</div>
+          </div>
+        </div>
+      </div>
+
+      <section class="bg-light py-5 mt-5">
+        <div class="container text-center">
+          <h2 class="fw-bold my-3">Comunicate a través de WhatsApp</h2>
+          <p class="mb-4">Contratá las volquetas que necesitás contactándonos por WhatsApp al <strong>091 62 62 26</strong> o haciendo clic en el siguiente botón:</p>
+          <a href="https://wa.me/59891626226" class="btn btn-success btn-lg">
+            <i class="bi bi-whatsapp me-2"></i>Enviar WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <!-- Área de cobertura: Mapa de ubicación -->
+      <section class="bg-white py-5">
+        <div class="container text-center">
+          <h2 class="fw-bold mb-4">Mapa de Cobertura</h2>
+          <p class="mb-4">Actualmente brindamos servicio en los siguientes barrios de Montevideo:</p>
+          <img src="img/mapa.png" class="img-fluid rounded mb-4" alt="Mapa de cobertura">
+        </div>
+      </section>
+      
+      <!-- Recomendaciones de uso -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <h2 class="fw-bold text-center mb-4">Recomendaciones de Uso</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <h5>1. Carga Segura</h5>
+              <p>Evita sobrecargar la volqueta y asegúrate de que los materiales estén bien distribuidos.</p>
+            </div>
+            <div class="col-md-4">
+              <h5>2. Horarios de Carga</h5>
+              <p>Coordina con nosotros el horario de carga y descarga para evitar inconvenientes.</p>
+            </div>
+            <div class="col-md-4">
+              <h5>3. Residuos Permitidos</h5>
+              <p>No se permiten residuos peligrosos, líquidos o inflamables. Consulta por otros tipos de residuos.</p>
+            </div>
+        </div>
+      </section>
+
+      <!-- Carrusel de logos de clientes -->
+      <section class="bg-white py-5">
+        <div class="container text-center">
+          <h2 class="fw-bold mb-4">Empresas que confían en nosotros</h2>
+          <div class="logo-slider">
+            <div class="logo-track">
+              <img src="img/clientes/c1.png" alt="Triex">
+              <img src="img/clientes/c2.jpg" alt="Frigorífico Carrasco">
+              <img src="img/clientes/c3.jpeg" alt="Frigorífico Clay">
+              <img src="img/clientes/c4.png" alt="CIEMSA">
+              <img src="img/clientes/c5.png" alt="ORT">
+              <img src="img/clientes/c6.png" alt="Starbucks">
+              <img src="img/clientes/c1.png" alt="Triex">
+              <img src="img/clientes/c2.jpg" alt="Frigorífico Carrasco">
+              <img src="img/clientes/c3.jpeg" alt="Frigorífico Clay">
+              <img src="img/clientes/c4.png" alt="CIEMSA">
+              <img src="img/clientes/c5.png" alt="ORT">
+              <img src="img/clientes/c6.png" alt="Starbucks">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- Galería de trabajos reales -->
+      <section class="bg-white py-5">
+        <div class="container text-center">
+          <h2 class="fw-bold mb-4">Galería de Trabajos Reales</h2>
+          <div class="row g-3">
+            <div class="col-md-4"><img src="img/1.jpg" class="img-fluid rounded" alt="Volqueta en obra 1"></div>
+            <div class="col-md-4"><img src="img/c1.jpg" class="img-fluid rounded" alt="Volqueta en obra 2"></div>
+            <div class="col-md-4"><img src="img/extra.jpg" class="img-fluid rounded" alt="Volqueta en obra 3"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+  <!-- Sección de contacto -->
+
+
+  <!-- Sección de contacto  en todos -->
+  <section id="contacto" class="contacto-volcast py-5">
+    <div id="cta-contacto" class="contenido-seccion d-none">
+      <section class="bg-dark text-white py-5" style="background: url('img/extra.jpg') center/cover no-repeat;">
+        <div class="container text-center">
+          <h2 class="fw-bold mb-4">CONTACTÁ CON NOSOTROS</h2>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="tel:23035246" class="btn btn-light btn-lg px-4">
+              <i class="bi bi-telephone-fill me-2"></i>2303 5246
+            </a>
+            <a href="tel:091626226" class="btn btn-light btn-lg px-4">
+              <i class="bi bi-telephone-fill me-2"></i>091 62 62 26
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Columna izquierda: info -->
+        <div class="col-md-6 text-red">
+          <h2 class="fw-bold">Dejanos un mensaje!</h2>
+          <p>Estamos para ayudarte con cualquier duda o coordinación.</p>
+          <p>Dejá tu contacto, nosotros te llamamos!</p>
+          <div class="mb-3"><i class="bi bi-telephone-fill me-2"></i> 2303-5246</div>
+          <div class="mb-3"><i class="bi bi-envelope-fill me-2"></i> mail@volcast.com</div>
+        </div>
+
+        <!-- Columna derecha: formulario -->
+        <div class="col-md-6">
+          <div class="bg-white p-4 rounded-4 shadow-sm">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label" style="color: #7b1e3d">Nombre:</label>
+                <input type="text" id="nombre" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label" style="color: #7b1e3d">Teléfono:</label>
+                <input type="tel" id="telefono" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label" style="color: #7b1e3d">Mensaje:</label>
+                <textarea id="mensaje" class="form-control" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn-bordo w-100">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Sección de nosotros -->
+  <div id="nosotros" class="contenido-seccion d-none">
+    <div class="container py-5 text-center">
+      <h2 class="text-volcast mb-4">Nosotros</h2>
+      <p>📧 info@volcast.com · 📞 091 62 62 26</p>
+      <a href="mailto:info@volcast.com" class="btn btn-outline-secondary m-2">Enviar Email</a>
+      <a href="https://wa.me/599323321" class="btn btn-volcast m-2">WhatsApp</a>
+    </div>
+  </div>
+
+  <footer class="bg-light text-center py-3">
+    <p class="mb-0">&copy; 2025 Volcast. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

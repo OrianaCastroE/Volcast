@@ -24,15 +24,15 @@ function toggleDetalles(tipo) {
   const detalles = {
     pequena: {
       titulo: "Volqueta Pequeña",
-      descripcion: "Ideal para tareas menores como jardinería, limpiezas simples o reformas livianas."
+      descripcion: "Ideal para... medidas:"
     },
     mediana: {
       titulo: "Volqueta Mediana",
-      descripcion: "Perfecta para proyectos medios como remodelaciones de cocina o baños."
+      descripcion: "Ideal para... medidas:"
     },
     grande: {
       titulo: "Volqueta Grande",
-      descripcion: "Diseñada para grandes volúmenes de escombro o trabajos industriales."
+      descripcion: "Ideal para... medidas:"
     }
   };
 

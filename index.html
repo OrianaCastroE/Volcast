@@ -46,7 +46,11 @@
 <!-- INICIO -->
 <section class="psec active" id="sec-inicio">
   <div class="hero">
-    <div class="hero-bg"></div><div class="hero-geo"></div>
+    <div class="hero-bg" id="heroBg"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="img/inicio/videoInicio.mp4" type="video/mp4">
+    </video>
+    <div class="hero-geo"></div>
     <div class="wrap">
       <div class="hero-content">
         <div class="live-badge"><div class="ldot"></div>Servicio disponible ahora</div>
@@ -185,10 +189,10 @@
         <h3 style="color:#fff;font-size:1.8rem;margin-bottom:26px">Preguntas frecuentes</h3>
         <div class="faq-box">
           <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Las 48 horas corren desde que me entregan la volqueta? <span class="fq-arr">▼</span></div><div class="fq-a">Sí, el plazo empieza a contar desde el momento en que entregamos la volqueta. Si necesitás más tiempo, avisános con anticipación para coordinar la extensión.</div></div>
-          <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Puedo poner la volqueta en la calle frente a mi casa? <span class="fq-arr">▼</span></div><div class="fq-a">Sí, pero necesitás tramitar un permiso previo en la Intendencia de Montevideo. Te asesoramos. Si va dentro de tu predio privado, no se requiere permiso.</div></div>
+          <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Puedo poner la volqueta en la calle frente a mi casa? <span class="fq-arr">▼</span></div><div class="fq-a">Sí, en caso de ser particular no se requiere permiso.</div></div>
           <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Qué pasa si lleno la volqueta antes de las 48 horas? <span class="fq-arr">▼</span></div><div class="fq-a">Podés avisarnos y la retiramos antes sin problema. Si necesitás otra volqueta de inmediato, la gestionamos rápidamente.</div></div>
           <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Qué materiales NO se pueden tirar? <span class="fq-arr">▼</span></div><div class="fq-a">No se admiten líquidos, materiales peligrosos, tóxicos, inflamables, residuos hospitalarios ni electrónicos. Para otros materiales especiales, consultános antes de cargar.</div></div>
-          <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Tienen servicio en Canelones? <span class="fq-arr">▼</span></div><div class="fq-a">Sí. Ciudad de la Costa, Las Piedras, La Paz, Pando, Toledo y zonas cercanas. Tarifa diferencial. Consultános para cotizar tu zona.</div></div>
+          <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Tienen servicio en Canelones? <span class="fq-arr">▼</span></div><div class="fq-a">Si, te invitamos a que busques en nuestro mapa de <button onclick="show('cobertura')" style="color:#f8ff6e">cobertura</button>. Consultanos para cotizar tu zona.</div></div>
           <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Puedo alquilar por más de 48 horas? <span class="fq-arr">▼</span></div><div class="fq-a">Sí, ofrecemos alquiler por días, semanas o meses con tarifas especiales para obras largas. Contactános para un presupuesto personalizado.</div></div>
         </div>
       </div>
@@ -207,7 +211,7 @@
       <p class="sec-sub">Servicio en toda Montevideo y zonas de Canelones. Usá el mapa para verificar tu ubicación.</p>
       <div class="cov-lay">
         <div class="map-box">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d131071.9!2d-56.1645!3d-34.8941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2suy!4v1700000000000!5m2!1ses!2suy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa cobertura Volcast"></iframe>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xDHQUsxczGkg1IoZQ3PQ7dP5luxQptk&ehbc=2E312F" width="640" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa cobertura Volcast"></iframe>
         </div>
         <div class="cov-inf">
           <h3>¿Llegamos a tu zona?</h3>

@@ -410,7 +410,7 @@ button{
 
 /* RESPONSIVE */
 @media(max-width:930px){.cov-lay,.nos-lay,.con-lay{grid-template-columns:1fr;gap:30px}.how-steps:before{display:none}}
-@media(max-width:680px){.topbar{display:none}.ntabs{display:none}.ham{display:flex}.hstats{grid-template-columns:repeat(2,1fr)}.frow{grid-template-columns:1fr}.fmc{padding:18px 15px}}
+@media(max-width:680px){.topbar{display:none}.ntabs{display:none}.ham{display:flex}.hstats{grid-template-columns:repeat(3,1fr)}.frow{grid-template-columns:1fr}.fmc{padding:18px 15px}}
 
 
 /* ── FLEET IMAGE FIX — no distortion ─────────────────── */

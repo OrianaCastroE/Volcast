@@ -146,9 +146,9 @@
         </div>
       </div>
       <div class="fleet-note">💡 <strong>¿Más tiempo?</strong> Alquilá por días, semanas o meses. Tarifas especiales en Canelones. <a href="https://wa.me/59891626226" target="_blank">Escribínos →</a></div>
-      <div style="margin-top:58px;padding-top:46px;border-top:2px solid var(--gl)">
+      <div style="margin-top:58px;padding-top:46px;border-top:2px solid var(--gl)" id="permisosIntendencia">
         <span class="chip">Información importante</span>
-        <h3 class="sec-title">Permisos de la Intendencia de Montevideo</h3>
+        <h3 class="sec-title" >Permisos de la Intendencia de Montevideo</h3>
         <p class="sec-sub">Para obras comerciales, industriales o de constructoras que requieran ocupar vía pública, la normativa exige permiso municipal previo.</p>
         <p class="sec-sub">Los particulares en predio propio no lo necesitan.</p>
         <div class="pg">
@@ -188,7 +188,8 @@
       <div style="margin-top:62px">
         <h3 style="color:#fff;font-size:1.8rem;margin-bottom:26px">Preguntas frecuentes</h3>
         <div class="faq-box">
-          <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Las 48 horas corren desde que me entregan la volqueta? <span class="fq-arr">▼</span></div><div class="fq-a">Sí, el plazo empieza a contar desde el momento en que entregamos la volqueta. Si necesitás más tiempo, avisános con anticipación para coordinar la extensión.</div></div>
+          <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Qué necesita mi empresa para encargar una volqueta? <span class="fq-arr">▼</span></div><div class="fq-a">Toda empresa u organización necesita realizar los <button onclick="show('servicios')" style="color:#f8ff6e">trámites correspondientes</button> en la intendencia.</div></div>
+          <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Las 48hs empiezan a correr a partir de la entrega? <span class="fq-arr">▼</span></div><div class="fq-a">Sí, el plazo empieza a contar desde el momento en que entregamos la volqueta. Si necesitás más tiempo, avisános con anticipación para coordinar la extensión.</div></div>
           <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Puedo poner la volqueta en la calle frente a mi casa? <span class="fq-arr">▼</span></div><div class="fq-a">Sí, en caso de ser particular no se requiere permiso.</div></div>
           <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Qué pasa si lleno la volqueta antes de las 48 horas? <span class="fq-arr">▼</span></div><div class="fq-a">Podés avisarnos y la retiramos antes sin problema. Si necesitás otra volqueta de inmediato, la gestionamos rápidamente.</div></div>
           <div class="fq" onclick="this.classList.toggle('open')"><div class="fq-q">¿Qué materiales NO se pueden tirar? <span class="fq-arr">▼</span></div><div class="fq-a">No se admiten líquidos, materiales peligrosos, tóxicos, inflamables, residuos hospitalarios ni electrónicos. Para otros materiales especiales, consultános antes de cargar.</div></div>
@@ -215,11 +216,10 @@
         </div>
         <div class="cov-inf">
           <h3>¿Llegamos a tu zona?</h3>
-          <div class="cz"><div class="cz-d p"></div><div><strong>Montevideo – cobertura total</strong><span>Todos los barrios de la capital. Sin costo adicional.</span></div></div>
-          <div class="cz"><div class="cz-d s"></div><div><strong>Ciudad de la Costa</strong><span>Disponible con tarifa diferencial.</span></div></div>
-          <div class="cz"><div class="cz-d s"></div><div><strong>Las Piedras y La Paz</strong><span>Disponible con tarifa diferencial.</span></div></div>
-          <div class="cz"><div class="cz-d s"></div><div><strong>Pando y Toledo</strong><span>Disponible con tarifa diferencial.</span></div></div>
-          <div class="cz"><div class="cz-d t"></div><div><strong>Otras zonas</strong><span>Consultános. Evaluamos disponibilidad sin compromiso.</span></div></div>
+          <div class="cz"><div class="cz-d p"></div><div><strong>Montevideo – zona metropolitana</strong><span>Disponible sin costo adicional.</span></div></div>
+          <div class="cz"><div class="cz-d p"></div><div><strong>Montevideo - urbano</strong><span>Disponible con costo adicional.</span></div></div>
+          <div class="cz"><div class="cz-d s"></div><div><strong>Canelones</strong><span>Disponible con costo adicional.</span></div></div>
+          <div class="cz"><div class="cz-d t"></div><div><strong>Otras zonas</strong><span>Consultanos. Evaluamos disponibilidad sin compromiso.</span></div></div>
           <div style="margin-top:20px"><a href="https://wa.me/59891626226" target="_blank" class="btn btn-primary">💬 Consultar mi zona</a></div>
         </div>
       </div>
@@ -351,23 +351,24 @@
           <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/OrianaCastro.jpg')"></div><div class="tc-i"><strong>Jorge Igarzabal</strong><span>Operaciones</span></div></div>
           <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/OrianaCastro.jpg')"></div><div class="tc-i"><strong>Victoria Castro</strong><span>Administrativa</span></div></div>
           <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/OrianaCastro.jpg')"></div><div class="tc-i"><strong>Gastón Acosta</strong><span>Administrativo</span></div></div>
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/OrianaCastro.jpg')"></div><div class="tc-i"><strong>Oriana Castro</strong><span>Técnica</span></div></div>
         </div>
       </div>
       <div style="margin-top:50px; padding-bottom:52px;border-bottom:2px solid var(--gl)">
         <h3 class="sec-title">Volcast en Uruguay</h3>
-        <p style="color:var(--gd);font-size:.92rem;margin-bottom:22px">Apoyamos el deporte y el turismo uruguayo</p>
+        <p style="color:var(--gd);font-size:.92rem;margin-bottom:22px">Apoyamos el deporte uruguayo</p>
         <div class="sp-g">
-          <div class="spcard"><img src="img/sponsor/sponsor1.jpg" alt="Turismo libre"/><div class="sp-ov"><span>Turismo libre uruguayo</span></div></div>
-          <div class="spcard"><img src="img/sponsor/sponsor2.jpg" alt="Superturismo"/><div class="sp-ov"><span>Superturismo uruguayo</span></div></div>
-          <div class="spcard"><img src="img/sponsor/sponsor3.jpg" alt="Fútbol"/><div class="sp-ov"><span>Fútbol uruguayo</span></div></div>
-          <div class="spcard"><img src="img/sponsor/sponsor4.jpg" alt="Fórmula 2"/><div class="sp-ov"><span>Fórmula 2 argentina</span></div></div>
-          <div class="spcard"><img src="img/sponsor/sponsor5.jpg" alt="Fórmula 2"/><div class="sp-ov"><span>Fórmula 2 argentina</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor5.jpg" alt="Fórmula 2 Argentina"/><div class="sp-ov"><span>Fórmula 2 argentina</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor1.jpg" alt="Superturismo"/><div class="sp-ov"><span>Superturismo uruguayo</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor2.jpg" alt="Turismo Libre"/><div class="sp-ov"><span>Turismo libre uruguayo</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor3.jpg" alt="Superturismo"/><div class="sp-ov"><span>Superturismo uruguayo</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor4.jpg" alt="Fútbol"/><div class="sp-ov"><span>Fútbol uruguayo</span></div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="mq-bar">
+  <!-- <div class="mq-bar">
     <div class="mq-lbl">Empresas que confían en Volcast</div>
     <div class="mq-wrap" id="mqWrap">
       <div class="mq-track" id="mqTrack">
@@ -391,7 +392,7 @@
         <span class="m-item"><span class="m-name">Starbucks</span></span>
       </div>
     </div>
-  </div>
+  </div> -->
 
     </div><!-- /wrap end before ext-srv -->
       <!-- MÁS SERVICIOS / EMPRESAS RELACIONADAS -->

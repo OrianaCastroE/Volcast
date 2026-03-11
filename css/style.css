@@ -433,9 +433,38 @@ button{
 .pg-ft{background:#1a0d10;color:rgba(255,255,255,.44);padding:26px 0;text-align:center;font-size:.78rem}
 
 /* RESPONSIVE */
-@media(max-width:930px){.cov-lay,.nos-lay,.con-lay{grid-template-columns:1fr;gap:30px}.how-steps:before{display:none}}
-@media(max-width:680px){.topbar{display:none}.ntabs{display:none}.ham{display:flex}.hstats{grid-template-columns:repeat(3,1fr)}.hs-n{font-size:1.35rem}.hs{padding:13px 6px}.frow{grid-template-columns:1fr}.fmc{padding:18px 15px}}
-
+@media(max-width:930px){
+  .cov-lay,.nos-lay,.con-lay{
+    grid-template-columns:1fr;
+    gap:30px
+  }
+  .how-steps:before{display:none}
+}
+/* 
+@media(max-width:680px){
+  .topbar{display:none}
+  .ntabs{display:none}
+  .ham{display:flex}
+  .hstats{grid-template-columns:repeat(3,1fr)}
+  .hs-n{font-size:1.35rem}
+  .hs{padding:13px 6px}
+  .frow{grid-template-columns:1fr}
+  .fmc{padding:18px 15px}
+} 
+*/
+@media(max-width:680px){
+  .topbar{display:none}
+  body{padding-top:66px}
+  .navbar{position:fixed;top:0;left:0;right:0;width:100%}
+  .mob-nav{top:66px}
+  .ntabs{display:none}
+  .ham{display:flex}
+  .hstats{grid-template-columns:repeat(3,1fr)}
+  .hs-n{font-size:1.35rem}
+  .hs{padding:13px 6px}
+  .frow{grid-template-columns:1fr}
+  .fmc{padding:18px 15px}
+}
 
 /* ── FLEET IMAGE FIX — no distortion ─────────────────── */
 .fc-img-wrap {

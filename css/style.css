@@ -160,7 +160,19 @@ button{
 .hero-geo{position:absolute;right:-60px;bottom:-60px;width:440px;height:440px;border:50px solid rgba(255,255,255,.04);border-radius:50%;pointer-events:none;z-index:2}
 .hero-content{position:relative;z-index:3;max-width:700px;padding:56px 0}
 .live-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px}
-.ldot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:pd 2s infinite}
+.ldot{
+  width:7px;
+  height:7px;
+  background:#4ade80;
+  border-radius:50%;
+  animation:pd 2s infinite}
+.ldot-off {
+  width: 7px;
+  height: 7px;
+  background: #f87171;
+  border-radius: 50%;
+  animation: none;
+}
 @keyframes pd{0%,100%{box-shadow:0 0 0 3px rgba(74,222,128,.25)}50%{box-shadow:0 0 0 6px rgba(74,222,128,.1)}}
 .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);color:#fff;text-transform:uppercase;margin-bottom:16px}
 .hero h1 em{font-style:normal;color:rgba(255,255,255,.44);display:block;font-size:.56em;letter-spacing:.06em;margin-bottom:.12em}

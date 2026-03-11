@@ -50,3 +50,21 @@ function toast(msg,color,bg){
   }
   requestAnimationFrame(step);
 })();
+
+// ── LIVE BADGE — disponible solo 8:00 a 18:00 ──────────
+(function(){
+  var badge = document.querySelector('.live-badge');
+  var dot = document.querySelector('.ldot');
+  if(!badge) return;
+
+  var hora = new Date().getHours();
+  var disponible = hora >= 8 && hora < 18;
+
+  if(disponible){
+    badge.innerHTML = '<div class="ldot"></div>Servicio disponible ahora';
+    dot.style.background = '#4ade80'; // verde
+  } else {
+    badge.innerHTML = '<div class="ldot ldot-off"></div>Oficinas cerradas, dejanos tu mensaje.';
+    badge.style.opacity = '0.6';
+  }
+})();

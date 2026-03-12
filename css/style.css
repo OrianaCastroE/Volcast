@@ -174,7 +174,7 @@ button{
   z-index: 0;
 }
 .hero-geo{position:absolute;right:-60px;bottom:-60px;width:440px;height:440px;border:50px solid rgba(255,255,255,.04);border-radius:50%;pointer-events:none;z-index:2}
-.hero-content{position:relative;z-index:3;max-width:700px;padding:56px 0}
+.hero-content{position:relative;z-index:3;max-width:1000px;padding:56px 0}
 .live-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px}
 .ldot{
   width:7px;

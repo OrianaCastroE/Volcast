@@ -14,20 +14,49 @@ document.getElementById('ham').addEventListener('click',function(){
   document.getElementById('mobNav').classList.toggle('open');
 });
 function animCtrs(){
-  document.querySelectorAll('.hs-n[data-t]').forEach(function(el){
-    var t=parseInt(el.dataset.t),sf=el.dataset.s||'',c=0,step=Math.ceil(t/40);
-    var tmr=setInterval(function(){c=Math.min(c+step,t);el.textContent=c+sf;if(c>=t)clearInterval(tmr);},35);
-  });
-}
-animCtrs();
-document.getElementById('cform').addEventListener('submit',function(e){
+  document.getElementById('cform').addEventListener('submit', async function(e){
   e.preventDefault();
-  var n=document.getElementById('nombre').value.trim();
-  var t=document.getElementById('tel').value.trim();
-  if(!n||!t){toast('Complet\u00e1 al menos tu nombre y tel\u00e9fono.','#78350f','#fffbeb');return;}
-  toast('\u2705 \u00a1Mensaje enviado! Te contactamos pronto.','#166534','#f0fdf4');
-  this.reset();
-});
+
+  var n = document.getElementById('nombre').value.trim();
+  var t = document.getElementById('tel').value.trim();
+
+  if(!n || !t){
+    toast('Completá al menos tu nombre y teléfono.', '#78350f', '#fffbeb');
+    return;
+  }
+
+  if(!/^09\d{7}$/.test(t.replace(/\s/g, ''))){
+    toast('El teléfono debe empezar con 09 y tener 9 dígitos.', '#78350f', '#fffbeb');
+    return;
+  }
+
+  const btn = this.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+
+  const formData = new FormData(this);
+
+  try {
+    const res = await fetch('https://formspree.io/f/xeerkepg', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if(res.ok){
+      toast('✅ ¡Mensaje enviado! Te contactamos pronto.', '#166534', '#f0fdf4');
+      this.reset();
+    } else {
+      toast('❌ Error al enviar. Intentá por WhatsApp.', '#7f1d1d', '#fef2f2');
+    }
+  } catch(err){
+    toast('❌ Error al enviar. Intentá por WhatsApp.', '#7f1d1d', '#fef2f2');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Enviar mensaje →';
+  }
+});}
+
 function toast(msg,color,bg){
   var el=document.getElementById('tmsg');
   el.textContent=msg;el.style.background=bg;el.style.color=color;

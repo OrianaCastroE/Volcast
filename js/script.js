@@ -1,4 +1,5 @@
-﻿function show(id){
+﻿// ── NAVEGACIÓN — mostrar sección y cerrar menú móvil ──────────
+function show(id){
   document.querySelectorAll('.psec').forEach(function(s){s.classList.remove('active')});
   document.querySelectorAll('.ntb').forEach(function(b){b.classList.remove('active')});
   var s=document.getElementById('sec-'+id);
@@ -8,13 +9,17 @@
   });
   document.getElementById('mobNav').classList.remove('open');
   window.scrollTo({top:0,behavior:'smooth'});
-  if(id==='inicio')animCtrs();
+  if(id==='contacto')animCtrs();
 }
 document.getElementById('ham').addEventListener('click',function(){
   document.getElementById('mobNav').classList.toggle('open');
 });
+
+// ── CONTACT FORM — validación y envío con Formspree ──────────
 function animCtrs(){
-  document.getElementById('cform').addEventListener('submit', async function(e){
+  var form = document.getElementById('cform');
+
+  form.addEventListener('submit', async function(e){
   e.preventDefault();
 
   var n = document.getElementById('nombre').value.trim();
@@ -57,13 +62,17 @@ function animCtrs(){
   }
 });}
 
+animCtrs();
+
+// ── TOASTS — mensajes temporales para feedback al usuario ──────────
 function toast(msg,color,bg){
   var el=document.getElementById('tmsg');
   el.textContent=msg;el.style.background=bg;el.style.color=color;
   el.classList.add('show');setTimeout(function(){el.classList.remove('show');},3800);
 }
 
-// ── INFINITE MARQUEE — JS driven, always full ──────────
+// ── MARQUEE — animación continua para logos de marcas ──────────
+/*
 (function(){
   var track = document.getElementById('mqTrack');
   if(!track) return;
@@ -79,6 +88,7 @@ function toast(msg,color,bg){
   }
   requestAnimationFrame(step);
 })();
+*/
 
 // ── LIVE BADGE — disponible solo 8:00 a 18:00 ──────────
 (function(){

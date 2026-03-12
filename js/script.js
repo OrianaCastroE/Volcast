@@ -18,6 +18,8 @@ document.getElementById('ham').addEventListener('click',function(){
 // ── CONTACT FORM — validación y envío con Formspree ──────────
 function animCtrs(){
   var form = document.getElementById('cform');
+  if(!form || form.dataset.bound === '1') return;
+  form.dataset.bound = '1';
 
   form.addEventListener('submit', async function(e){
   e.preventDefault();

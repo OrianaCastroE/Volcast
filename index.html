@@ -472,12 +472,12 @@
         <div class="fmc">
           <h3>Dejanos tu mensaje</h3>
           <p class="fd">Completá el formulario y te contactamos a la brevedad.</p>
-          <form id="cform" novalidate>
+          <form id="cform" novalidate action="https://formspree.io/f/xeerkepg" method="POST">
             <div class="frow">
               <div class="fg"><label for="nombre">Nombre *</label><input type="text" id="nombre" placeholder="Tu nombre" required/></div>
               <div class="fg"><label for="tel">Teléfono *</label><input type="tel" id="tel" placeholder="09x xxx xxx" required/></div>
             </div>
-            <div class="fg"><label for="email">Email</label><input type="email" id="email" placeholder="tu@email.com"/></div>
+            <div class="fg"><label for="email">Email *</label><input type="email" id="email" placeholder="tu@email.com" required/></div>
             <div class="fg">
               <label for="srv">¿Qué necesitás?</label>
               <select id="srv">

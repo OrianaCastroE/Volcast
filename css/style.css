@@ -237,6 +237,39 @@ button{
 .fleet-note{margin-top:17px;padding:13px 17px;background:var(--of);border-left:4px solid var(--b);border-radius:0 6px 6px 0;font-size:.86rem;color:var(--gd)}
 .fleet-note a{color:var(--b);font-weight:600}
 
+/* CLIENTES */
+.tipo-cliente-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.tipo-btn {
+  padding: 9px 18px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.tipo-btn:hover {
+  border-color: var(--bd);
+  color: var(--b);
+}
+
+.tipo-btn.activo {
+  border-color: var(--bd, var(--bd));
+  background: var(--bx, var(--bx));
+  color: #fff;
+  font-weight: 600;
+}
+
 /* SERVICES */
 .srv-grid{
     display:grid;

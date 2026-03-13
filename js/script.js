@@ -123,7 +123,7 @@ function toast(msg,color,bg){
   if(!badge) return;
 
   var hora = new Date().getHours();
-  var disponible = hora >= 8 && hora < 18;
+  var disponible = hora >= 7.5 && hora < 18;
 
   if(disponible){
     badge.innerHTML = '<div class="ldot"></div>Servicio disponible ahora';
@@ -133,3 +133,13 @@ function toast(msg,color,bg){
     badge.style.opacity = '0.6';
   }
 })();
+
+/* tipo de cliente: particular o empresa, con campos dinámicos */
+function seleccionarTipo(btn, tipo) {
+  // Actualiza botones
+  document.querySelectorAll('.tipo-btn').forEach(b => b.classList.remove('activo'));
+  btn.classList.add('activo');
+
+  // Guarda el valor en el input oculto
+  document.getElementById('tipo_cliente').value = tipo;
+}

@@ -9,14 +9,38 @@ function show(id){
   });
   document.getElementById('mobNav').classList.remove('open');
   window.scrollTo({top:0,behavior:'smooth'});
-  if(id==='contacto')animCtrs();
+  if(id==='contacto')contactForm();
+  if(id==='inicio')animatedNumbers();
 }
 document.getElementById('ham').addEventListener('click',function(){
   document.getElementById('mobNav').classList.toggle('open');
 });
 
+function animatedNumbers(){
+  document.querySelectorAll('.hs-n[data-t]').forEach(
+    function(el){
+      var t = parseInt(el.dataset.t),sf=el.dataset.s||'',c=0,step=Math.ceil(t/40);
+      var tmr = setInterval(
+        function(){
+          c=Math.min(c+step,t);
+          el.textContent = c + sf;
+          if(c>=t){
+            clearInterval(tmr);
+          }
+        },35);
+    }
+  );
+}
+animatedNumbers();
+document.getElementById('cform').addEventListener('submit',function(e){
+document.getElementById('cform').addEventListener('submit', async function(e){
+  e.preventDefault();
+  this.reset();
+});
+});
+
 // ── CONTACT FORM — validación y envío con Formspree ──────────
-function animCtrs(){
+function contactForm(){
   var form = document.getElementById('cform');
   if(!form || form.dataset.bound === '1') return;
   form.dataset.bound = '1';
@@ -64,7 +88,7 @@ function animCtrs(){
   }
 });}
 
-animCtrs();
+contactForm();
 
 // ── TOASTS — mensajes temporales para feedback al usuario ──────────
 function toast(msg,color,bg){

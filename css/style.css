@@ -838,7 +838,10 @@ button{
 
 /* ══ VALORES ══════════════════════════════════════════ */
 .val-section {
-  padding: 52px 0;
+  margin-top: 52px;
+  margin-left: 52px;
+  margin-right: 52px;
+  margin-bottom: 0%;
   background: var(--of);
 }
 .val-section-header {

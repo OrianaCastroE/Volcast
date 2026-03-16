@@ -892,6 +892,60 @@ button{
   line-height: 1.65;
 }
 
+.seg-section {
+  background: #fff;
+  width: 100%;
+}
+.seg-section-header {
+  margin-bottom: 28px;
+}
+.seg-section-header h3 {
+  font-size: 1.8rem;
+  color: var(--bd);
+  margin-bottom: 6px;
+}
+.seg-section-header p {
+  font-size: .92rem;
+  color: var(--gd);
+}
+.seg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.sg strong{
+  display:block;
+  font-weight:700;
+  color:var(--bd);
+  font-size:.96rem;
+  margin-bottom:2px
+}
+.sg p{
+  font-size:.83rem;
+  color:var(--gd);
+  line-height:1.55
+}
+.sg {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--of);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1.5px solid var(--gl);
+  transition: all .3s;
+  margin-top: 2%;
+}
+.sg:hover {
+  border-color: var(--b);
+  box-shadow: 0 6px 18px var(--sh);
+}
+.sg-ico {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 /* ── MARQUEE INFINITE — ensure it never stops ─────────── */
 .mq-track {
   animation: mq 30s linear infinite !important;
